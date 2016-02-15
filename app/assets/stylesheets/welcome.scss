@@ -1,0 +1,35 @@
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+div.btn {
+  
+background-color: tomato;
+
+}
+
+
+a {
+  
+
+  text-decoration: none;
+
+}
+
+.btn {
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    width:10em;
+    height:2em;
+    margin-top: -9em; /*set to a negative number 1/2 of your height*/
+    margin-left: -15em; /*set to a negative number 1/2 of your width*/
+ 
+}
+
+.button {
+    display: table;
+    margin: 0 auto;
+}

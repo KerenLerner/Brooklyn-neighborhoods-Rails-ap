@@ -1,0 +1,63 @@
+<%= form_for(@seeker) do |f| %>
+  <% if @seeker.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@seeker.errors.count, "error") %> prohibited this seeker from being saved:</h2>
+
+      <ul>
+      <% @seeker.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :seeker_name, 'Your Name' %><br>
+    <%= f.text_field :seeker_name %>
+  </div>
+  <div class="field">
+    <%= f.label :seeker_rent, 'Your Max Monthly Rent for a 1 Bedroom' %><br>
+    <%= f.number_field :seeker_rent %>
+  </div>
+  <div class="field">
+    <%= f.label :seeker_park, 'Should your neighborhood be near Prospect Park?' %><br>
+   
+    <%= label_tag(:seeker_park, "Yes") %>
+    <%= f.radio_button :seeker_park, "1" %>
+    <%= label_tag(:seeker_park, "No") %>
+    <%= f.radio_button :seeker_park, "0" %>
+
+  </div>
+  <div class="field">
+    <%= f.label :seeker_activities, 'Should your neighborhood have plenty of activities?' %><br>
+   <%= label_tag(:seeker_activities, "Yes") %>
+    <%= f.radio_button :seeker_activities, "1" %>
+    <%= label_tag(:seeker_activities, "No") %>
+    <%= f.radio_button :seeker_activities, "0" %>
+  </div>
+  <div class="field">
+
+
+<%= f.label :seeker_architecture, 'What kind of architecture should your neighborhood have?' %><br>
+
+<%= label_tag(:seeker_architecture, "Brownstone") %>
+<%= f.radio_button :seeker_architecture, "Brownstone" %>
+
+<%= label_tag(:seeker_architecture, "Victorian") %>
+<%= f.radio_button :seeker_architecture, "Victorian" %>
+
+<%= label_tag(:seeker_architecture, "Modern") %>
+<%= f.radio_button :seeker_architecture, "Modern" %>
+
+
+
+  </div>
+  <div class="field">
+    <%= f.label :seeker_commute, 'Your maximum subway commute time to Union Sq, in minutes' %><br>
+    <%= f.number_field :seeker_commute %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+

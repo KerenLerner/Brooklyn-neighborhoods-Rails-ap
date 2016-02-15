@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  seeker_name: MyString
+  seeker_rent: 1
+  seeker_park: false
+  seeker_activities: false
+  seeker_architecture: MyString
+  seeker_commute: 1
+
+two:
+  seeker_name: MyString
+  seeker_rent: 1
+  seeker_park: false
+  seeker_activities: false
+  seeker_architecture: MyString
+  seeker_commute: 1

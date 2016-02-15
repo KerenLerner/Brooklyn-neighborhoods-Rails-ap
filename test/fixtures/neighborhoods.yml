@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  rent: 1
+  park: false
+  activities: false
+  architecture: MyString
+  commute: 1
+
+two:
+  name: MyString
+  rent: 1
+  park: false
+  activities: false
+  architecture: MyString
+  commute: 1

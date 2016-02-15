@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<h2>Hi there <%= @seeker.seeker_name.titleize %>!  Based on your quiz, here are your preferences:</h2>
+<!-- <p>
+  <strong>Seeker name:</strong>
+  <%= @seeker.seeker_name %>
+</p> -->
+
+<p>
+  <strong>Your maximum monthly rent for a 1-bedroom apartment:</strong>
+  <%= @seeker.seeker_rent %>
+</p>
+
+<p>
+  <strong>Your new neighborhood must be near Prospect Park:</strong>
+  <%= @seeker.seeker_park %>
+</p>
+
+<p>
+  <strong>Your new neighborhood must have many activities nearby:</strong>
+  <%= @seeker.seeker_activities %>
+</p>
+
+<p>
+  <strong>The architecture you prefer:</strong>
+  <%= @seeker.seeker_architecture %>
+</p>
+
+<p>
+  <strong>Your maximum subway ride to Union Square:</strong>
+  <%= @seeker.seeker_commute %> minute(s)
+</p>
+
+<h2>Here are the neighborhoods that match your criteria: </h2>
+
+<% if @matches.empty?  %>
+<%=   "Sorry, none of the Brooklyn neighborhoods in our database meet your criteria." %>
+<% else  @matches.collect do |neighborhood| %>
+<li><%= neighborhood.name %></li>
+<% end %>
+<% end %>
+
+<%= link_to 'Edit', edit_seeker_path(@seeker) %> |
+<%= link_to 'Back', seekers_path %>
